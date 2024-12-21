@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-app-new
+  labels:
+    app: go-app-new
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-app-new
+  template:
+    metadata:
+      labels:
+        app: go-app-new
+    spec:
+      containers:
+      - name: go-app-new
+        image: sankha1/go-app-new:v1
+        ports:
+        - containerPort: 8080

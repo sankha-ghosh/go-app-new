@@ -4,7 +4,7 @@ metadata:
   name: go-app-new
 spec:
   selector:
-    app.kubernetes.io/name: go-app-new
+    app: go-app-new
     type : clusterIP
   ports:
     - protocol: TCP

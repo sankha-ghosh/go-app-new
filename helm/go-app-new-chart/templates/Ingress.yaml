@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: go-app-new
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx # specifies which Ingress controller should handle this Ingress. In this case, it indicates that the NGINX Ingress controller should manage the Ingress resource. Here's why this is important:
+  rules:
+  - host: go-app-new.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: go-app-new
+            port:
+              number: 80

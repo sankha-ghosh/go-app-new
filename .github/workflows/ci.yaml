@@ -1,0 +1,25 @@
+name: CI
+
+on:
+ push:
+  branches:
+   - main
+  paths-ignore:
+   - 'README.md'
+   -  'helm/**'
+jobs:
+ build:
+  runs-on: ubuntu-latest
+  steps:
+   - name: chekout repo
+     uses: actions/checkout@v4
+   - name: Set up Go 1.22
+     uses: actions/setup-go@v2
+     with:
+      go-version: '1.22'
+
+   - name: Build
+     run: go build  -o go-app-new
+   - name: Test
+     run: go test ./..  #test the usnit test cases
+

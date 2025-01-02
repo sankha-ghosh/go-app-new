@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-app-new
+spec:
+  selector:
+    app: go-app-new
+    type : clusterIP
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+
+

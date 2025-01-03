@@ -63,7 +63,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
-        token: ${{ secrets.general-token }}
+        token: ${{ secrets.general_token }}
 
     - name: Update tag in Helm chart
       run: |

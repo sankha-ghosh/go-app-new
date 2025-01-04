@@ -27,11 +27,11 @@ jobs:
 
       # Build the Go application
       - name: Build
-        run: go build -o main . /home/ubuntu/go-app-new
+        run: go build -o go-app-new-build .
       # Run Go tests
       - name: Test
         run: go test ./...
-        working-directory: /home/ubuntu/go-app-new
+      #  working-directory: /home/ubuntu/go-app-new
 
 
   code-quality:

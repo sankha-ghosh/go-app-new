@@ -1,4 +1,4 @@
-from golang:1.23 as base
+from golang:1.22 as base
 
 workdir  /app
 

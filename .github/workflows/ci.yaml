@@ -18,7 +18,7 @@ jobs:
       - name: Debug Directory Contents
         run: |
           echo "this is Current Directory: $(pwd)"
-          run: ls -R
+          ls -R
       # Set up Go 1.22
       - name: Set up Go 1.22
         uses: actions/setup-go@v2

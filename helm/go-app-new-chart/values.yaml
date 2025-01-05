@@ -4,7 +4,7 @@ image:
   repository: sankha1/go-app-new
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "12622065380"
+  tag: "12622362843"
 
 ingress:
   enabled: false

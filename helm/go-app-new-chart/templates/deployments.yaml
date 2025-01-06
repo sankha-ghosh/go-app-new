@@ -13,7 +13,7 @@ spec:
     metadata:
       labels:
         app: go-app-new
-        clusterIP: true
+        clusterIP: "true"
     spec:
       containers:
       - name: go-app-new
